@@ -1,0 +1,47 @@
+# Use with Clang-Format 7.0.0
+#
+# This style is based on the “Stroustrup” style,
+# defined in http://www.stroustrup.com/Programming/PPP-style.pdf.
+#
+# The built-in WebKit style is the closest, so this style we be based
+# on it, with only the derivations set below.
+#
+# Docs: http://releases.llvm.org/7.0.0/tools/clang/docs/ClangFormatStyleOptions.html
+
+BasedOnStyle: WebKit
+AlignAfterOpenBracket: Align
+AlignOperands: true
+AlignTrailingComments: true
+AllowAllParametersOfDeclarationOnNextLine: false
+AllowShortCaseLabelsOnASingleLine: true
+AllowShortFunctionsOnASingleLine: None
+AllowShortIfStatementsOnASingleLine: true
+AllowShortLoopsOnASingleLine: true
+AlwaysBreakTemplateDeclarations: Yes
+BreakBeforeBinaryOperators: NonAssignment
+BreakBeforeBraces: Stroustrup
+BreakInheritanceList: AfterColon
+BreakConstructorInitializers: AfterColon
+ColumnLimit: 120
+Cpp11BracedListStyle: true
+ForEachMacros: []
+IncludeBlocks: Preserve
+IncludeCategories:
+  - Regex: "<[^.]*>" # C++ Standard Library
+    Priority: 1
+  - Regex: "<.*>" # System & Vendor
+    Priority: 2
+  - Regex: '".*"' # Project
+    Priority: 3
+IndentPPDirectives: AfterHash
+KeepEmptyLinesAtTheStartOfBlocks: false
+NamespaceIndentation: All
+SpaceAfterTemplateKeyword: false
+SpaceBeforeCpp11BracedList: false
+SpacesInContainerLiterals: false
+TabWidth: 4
+UseTab: Never
+
+# other languages
+BreakAfterJavaFieldAnnotations: true
+JavaScriptQuotes: Double
